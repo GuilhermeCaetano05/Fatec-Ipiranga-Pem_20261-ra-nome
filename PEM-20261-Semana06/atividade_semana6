@@ -1,0 +1,19 @@
+#include <stdio.h>
+// Função que imprime os dígitos de um número na ordem inversa
+void inverterNumero(int n) {
+    // Caso base: se o número for 0, não faz nada e começa a voltar
+    if (n == 0) {
+        return;
+    }
+    // Ação: imprime o último dígito (resto da divisão por 10)
+    printf("%d", n % 10);
+    // Chamada recursiva: passa o número sem o último dígito
+    inverterNumero(n / 10);
+}
+int main() {
+    int valor = 12345;
+    printf("Invertendo o numero %d: ", valor);
+    inverterNumero(valor);
+    printf("\n");
+    return 0;
+}
